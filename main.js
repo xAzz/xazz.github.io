@@ -19,7 +19,7 @@ const escapeHTML = (() => {
     return messageFormat => messageFormat.replace(/[\"&<>]/g, off => buf[off]);
 })();
 
-let ws = new WebSocket("wss://selftoolz.us:5823");
+let ws = new WebSocket("wss://api.selftoolz.us:5823");
 ws.binaryType = "arraybuffer";
 ws.onopen = () => console.log("Connection Opened");
 ws.onmessage = msg => {
